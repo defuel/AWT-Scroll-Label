@@ -5,6 +5,12 @@ public class CustomPanel extends Panel implements Runnable{
     Image offscreen;
 
     @Override
+    public void update(Graphics g) {
+        System.out.println("panel-update");
+        paint(g);
+    }
+
+    @Override
     public void paint(Graphics g) {
         System.out.println("panel-paint");
         if(offscreen == null){

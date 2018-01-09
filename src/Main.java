@@ -3,7 +3,7 @@ import java.awt.*;
 public class Main {
 
     public static void main(String[] args) {
-        Frame frame = new Frame();
+        Frame frame = new CustomFrame();
         frame.setTitle("TEST");
         frame.setSize(300, 300);
 
