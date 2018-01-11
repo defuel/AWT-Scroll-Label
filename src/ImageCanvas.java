@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 public class ImageCanvas extends Component implements Updatable {
     Dimension dimension;
@@ -12,7 +13,8 @@ public class ImageCanvas extends Component implements Updatable {
         setSize(width, height);
         dimension = new Dimension(width, height);
         try {
-            image = ImageIO.read(new File(imagePath));
+            URL url = this.getClass().getResource(imagePath);
+            image = ImageIO.read(url);
         } catch (IOException e) {
             e.printStackTrace();
         }
